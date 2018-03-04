@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_home"
+        title="主页"
+        icon="@mipmap/bottom_button1_pressed"
+        />
+    <tab
+        id="@+id/tab_order"
+        title="订单"
+        icon="@mipmap/bottom_button2_pressed"
+        />
+    <tab
+        id="@+id/tab_nearby"
+        title="我"
+        icon="@mipmap/bottom_button4_pressed"
+        />
+</tabs>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">乐滴电召</string>
+    <string name="order_alert_text">抢单后显示乘客信息</string>
+</resources>

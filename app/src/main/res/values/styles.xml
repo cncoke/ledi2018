@@ -1,0 +1,79 @@
+<resources>
+
+
+    <style name="AppTheme_activity" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:statusBarColor">@color/public_button_normal</item>
+    </style>
+
+    <style name="CommonDialog" parent="@android:style/Theme.DeviceDefault.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="blankStyle">
+
+        <item name="android:windowBackground">@color/common_transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="dialog111" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@color/common_transparent</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">false</item><!--模糊-->
+    </style>
+
+    <style name="common_view_divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/common_divider</item>
+    </style>
+
+    <style name="edit_text_style">
+        <item name="android:background">@color/common_transparent</item>
+        <item name="android:textSize">@dimen/font_size14</item>
+        <item name="android:layout_marginLeft">5dp</item>
+
+    </style>
+
+    <style name="center_list_style">
+        <item name="android:textColor">#95000000</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:textSize">@dimen/font_size14</item>
+        <item name="android:layout_marginLeft">10dp</item>
+    </style>
+
+    <style name="public_button_style">
+
+        <item name="android:textColor">@color/common_white</item>
+        <item name="android:textSize">@dimen/font_size16</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_margin">6dp</item>
+        <item name="android:background">@drawable/selector_public_button_background</item>
+
+    </style>
+
+    <style name="loading">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+
+</resources>

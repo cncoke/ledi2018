@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:hyphenate="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_activity_background"
+              android:orientation="vertical">
+
+    <cn.yc.ledi.widget.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        hyphenate:titleBarTitle="手机验证"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/common_white"
+        android:orientation="vertical">
+
+
+        <View
+            style="@style/common_view_divider"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/center_list_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手机号码"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/center_list_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+86"/>
+
+                <EditText
+                    android:id="@+id/et_carphone"
+                    style="@style/edit_text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="请输入11位手机号码"
+
+                    android:inputType="textPhonetic"
+                    android:maxLength="11">
+
+                </EditText>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            style="@style/common_view_divider"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/center_list_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="验  证  码"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center_vertical">
+
+
+                <TextView
+                    android:id="@+id/tv_sendcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:clickable="true"
+                    android:onClick="sendSmsCode"
+                    android:paddingLeft="6dp"
+
+                    android:paddingRight="6dp"
+                    android:text="发验证码"
+                    android:textColor="@color/common_black"
+                    android:textSize="@dimen/font_size12"/>
+
+                <EditText
+                    android:id="@+id/et_sendcode"
+                    style="@style/edit_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_sendcode"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/tv_sendcode"
+                    android:layout_toStartOf="@+id/tv_sendcode"
+                    android:hint="请输入验证码"
+                    android:inputType="number"
+                    android:maxLength="11">
+
+                </EditText>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            style="@style/common_view_divider"
+            android:layout_marginTop="6dp"/>
+    </LinearLayout>
+
+    <TextView
+        style="@style/public_button_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:onClick="onSubmit"
+        android:text="验 证"/>
+
+</LinearLayout>

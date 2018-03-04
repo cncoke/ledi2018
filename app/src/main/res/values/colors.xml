@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <drawable name="color_b">#44aaaaaa</drawable>
+    <drawable name="color_a">#00000000</drawable>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="common_white">#ffffff</color>
+    <color name="common_title_background">#2e2d33</color>
+    <color name="common_activity_background">#f2f2f2</color>
+    <color name="common_transparent">#00000000</color>
+    <color name="common_black">#000000</color>
+    <color name="common_divider">#dadada</color>
+    <color name="common_title_button_pressed">#151517</color>
+    <color name="public_button_normal">#29cc96</color>
+    <color name="public_button_pressed">#21a67a</color>
+    <color name="common_yellow">#e4ff00</color>
+    <color name="common_content">#90000000</color>
+    <color name="common_f53e36">#f53e36</color>
+</resources>

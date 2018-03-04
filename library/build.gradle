@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 26
+
+
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile 'com.squareup.okhttp3:okhttp:3.8.1'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.readystatesoftware.chuck:library:1.0.4'
+}
+/*
+*
+* VERSIONCODE=1
+VERSIONNAME=1.0
+MOB_APP_KEY=169901088b061
+MOB_APP_SECRET=02e38f4878a26eb40c8b6078f525eba7
+
+RELEASE_KEYALIAS=baixunapp2015
+RELEASE_KEYPASSWORD=fangliguo
+RELEASE_STOREFILE=D:/Desktop/baixun.keystore
+RELEASE_STOREPASSWORD=fangliguo
+
+* */

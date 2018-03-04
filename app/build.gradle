@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+apply plugin: "com.mob.sdk"
+MobSDK {
+    appKey project.MOB_APP_KEY
+    appSecret project.MOB_APP_SECRET
+
+    SMSSDK {}
+    PaySDK {}
+}
+android {
+    signingConfigs {
+        release {
+            keyAlias project.RELEASE_KEYALIAS
+            keyPassword project.RELEASE_KEYPASSWORD
+            storeFile file(project.RELEASE_STOREFILE)
+            storePassword project.RELEASE_STOREPASSWORD
+        }
+    }
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "cn.yc.ledi"
+        minSdkVersion 16
+        targetSdkVersion 26
+
+        versionCode project.VERSIONCODE as int
+        versionName project.VERSIONNAME
+//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            //是否移除无用资源
+//            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+
+//            signingConfig signingConfigs.release
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+        }
+    }
+}
+
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    //权限检测
+    implementation 'com.yanzhenjie:permission:2.0.0-rc2'
+    //xrecyclerview
+    compile 'com.jcodecraeer:xrecyclerview:1.5.9'
+    //科大讯飞
+    compile files('libs/Msc.jar')
+    compile files('libs/Sunflower.jar')
+    //网络请求
+    //implementation project(':rxeasyhttp')
+    //注入
+    compile 'org.xutils:xutils:3.5.0'
+    //json 解析
+    compile 'com.alibaba:fastjson:1.2.44'
+    implementation project(':library')
+    implementation project(':otherutils')
+//    implementation 'com.android.support:design:26.+'
+
+
+
+
+    //QMUI
+    compile 'com.qmuiteam:qmui:1.0.7'
+}
